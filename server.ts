@@ -8,6 +8,7 @@ import  path from 'path';
 import { apiUploadImage } from './api/posts/apiUploadImage';
 import { CustomRequestHander } from './interface/express';
 import { apiErrorHandler } from './api/general/errorHandler';
+import  {apiCheckPostFilter} from './api/posts/apiCheckPostFilter'
 
 const app=express();
 
@@ -34,7 +35,7 @@ app.get('/',(req,res,next)=>{
     res.send(`hello learn ts...`);
 })
 
-app.get('/posts',apiGetPosts);
+app.get('/posts',apiCheckPostFilter,apiGetPosts);
 app.delete('/posts/:id',apiDeleteDetail);
 
 app.post('/posts/:id',apiGetDetail);

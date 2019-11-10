@@ -12,6 +12,7 @@ const apiDeleteDetail_1 = require("./api/posts/apiDeleteDetail");
 const path_1 = __importDefault(require("path"));
 const apiUploadImage_1 = require("./api/posts/apiUploadImage");
 const errorHandler_1 = require("./api/general/errorHandler");
+const apiCheckPostFilter_1 = require("./api/posts/apiCheckPostFilter");
 const app = express_1.default();
 app.use(body_parser_1.default.urlencoded({ extended: false }));
 app.use(body_parser_1.default.json());
@@ -31,7 +32,7 @@ app.use(authenticator);
 app.get('/', (req, res, next) => {
     res.send(`hello learn ts...`);
 });
-app.get('/posts', apiGetPosts_1.apiGetPosts);
+app.get('/posts', apiCheckPostFilter_1.apiCheckPostFilter, apiGetPosts_1.apiGetPosts);
 app.delete('/posts/:id', apiDeleteDetail_1.apiDeleteDetail);
 app.post('/posts/:id', apiGetDetail_1.apiGetDetail);
 app.post('/posts', apiCreatePost_1.apiCreatePost);
