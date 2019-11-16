@@ -1,5 +1,6 @@
 sudo npm install -g typescript
 tsc --init
+tsc --outfile 输出目标文件 文件1 文件2 文件3 
 
 安装插件
 Live Server
