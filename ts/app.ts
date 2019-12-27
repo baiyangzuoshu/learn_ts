@@ -24,6 +24,6 @@ let handleCount:HandleCount={
     sumValue:sunValue,
     friends:['maomao','apo']
 }
-
+/// <reference path = "namespace_learn.js" />
 console.log(Tools.calcCircle(20));
 console.log(Tools.Circle.calcCircle(10));

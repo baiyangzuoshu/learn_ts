@@ -24,8 +24,8 @@ class   Man implements  Person,StudentInterface{
     name:string='maomao';
     age:number=26;
     salary:number=16000;
-    id:100;
-    course:'IT';
+    id:number=100;
+    course:string='IT';
     constructor(name:string,age:number){
         //super()不同于类继承
         this.name=name;
