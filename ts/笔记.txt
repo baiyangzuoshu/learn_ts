@@ -5,3 +5,6 @@ tsc --outfile 输出目标文件 文件1 文件2 文件3
 安装插件
 Live Server
 TypeScript Auto Compiler
+
+namespace
+tsc --outFile test.js test.ts
