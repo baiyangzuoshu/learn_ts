@@ -16,6 +16,6 @@ type myType={data:number[],myFunc:(item:number)=>number[]};
 let complex2:myType={
     data:[22,22,32],
     myFunc:(item):number[]=>{
-        return this.data;
+        return []//this.data;
     }
 }
